@@ -23,6 +23,7 @@ export const postURLShortener = async (req, res) => {
 
         links[finalShortCode] = url
         await saveLinks(links)
+        await saveLinks({url,shortCode})
         return res.redirect("/")
     } catch (error) {
         console.error(error)

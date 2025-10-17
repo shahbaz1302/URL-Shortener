@@ -1,9 +1,9 @@
 import express from "express";
 import router from "./routes/shortener.routes.js";
 
-const app = express()
+const PORT=3000
 
-const PORT = 3000
+const app = express()
 
 app.use(express.static("public"))
 app.use(express.urlencoded({extended:true}))
